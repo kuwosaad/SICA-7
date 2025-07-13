@@ -6,8 +6,25 @@ os.environ["OPENROUTER_API_KEY"] = OPENROUTER_API_KEY
 
 def main():
     print("Initializing agents...")
-    agent1 = Agent(name="Agent1", model=AGENT1_MODEL)
-    agent2 = Agent(name="Agent2", model=AGENT2_MODEL)
+
+    # Read system prompts
+    ceo_prompt_path = os.path.join(os.path.dirname(__file__), "system_prompt_ceo.txt")
+    genius_prompt_path = os.path.join(os.path.dirname(__file__), "system_prompt_genius.txt")
+
+    try:
+        with open(ceo_prompt_path, "r") as f:
+            ceo_system_prompt = f.read().strip()
+    except FileNotFoundError:
+        ceo_system_prompt = None
+
+    try:
+        with open(genius_prompt_path, "r") as f:
+            genius_system_prompt = f.read().strip()
+    except FileNotFoundError:
+        genius_system_prompt = None
+
+    agent1 = Agent(name="Agent1 (CEO)", model=AGENT1_MODEL, system_prompt=ceo_system_prompt)
+    agent2 = Agent(name="Agent2 (Genius)", model=AGENT2_MODEL, system_prompt=genius_system_prompt)
 
     # Read instructions from instructions.txt
     instructions_file_path = os.path.join(os.path.dirname(__file__), "instructions.txt")

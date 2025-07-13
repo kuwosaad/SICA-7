@@ -2,7 +2,7 @@ import os
 from openai import OpenAI
 
 class Agent:
-    def __init__(self, name, model="openai/gpt-3.5-turbo"):
+    def __init__(self, name, model="openai/gpt-3.5-turbo", system_prompt=None):
         self.name = name
         self.model = model
         self.client = OpenAI(
@@ -10,6 +10,8 @@ class Agent:
             api_key=os.getenv("OPENROUTER_API_KEY"),
         )
         self.messages = []
+        if system_prompt:
+            self.messages.append({"role": "system", "content": system_prompt})
 
     def send_message(self, recipient_agent, message_content):
         print(f"\n{self.name} sending message to {recipient_agent.name}: {message_content}")

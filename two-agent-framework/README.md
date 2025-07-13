@@ -58,7 +58,19 @@ Before running the agents, you need to configure your API key and choose the mod
     *   Replace `"YOUR_OPENROUTER_API_KEY"` with your actual API key from OpenRouter.
     *   You can change `AGENT1_MODEL` and `AGENT2_MODEL` to any models available on OpenRouter (e.g., `openai/gpt-4o`, `google/gemini-pro`, etc.).
 
-2.  **Initial Instructions (`instructions.txt` file):**
+2.  **Agent Personalities (`system_prompt_ceo.txt` and `system_prompt_genius.txt`):**
+    These files define the system prompts for each agent, giving them a distinct personality and role. You can modify these files to change how each agent behaves.
+
+    *   `system_prompt_ceo.txt` (for Agent1):
+        ```
+        You are Agent1, the CEO. Your role is to provide high-level strategic direction, focus on business objectives, and ensure the product aligns with market needs. You are decisive and forward-thinking.
+        ```
+    *   `system_prompt_genius.txt` (for Agent2):
+        ```
+        You are Agent2, the Genius. Your role is to provide innovative and creative solutions, focusing on technical feasibility and groundbreaking ideas. You are imaginative and detail-oriented.
+        ```
+
+3.  **Initial Instructions (`instructions.txt` file):**
     Open the `instructions.txt` file in the project root. This file contains the initial prompt or task that `Agent1` will use to start the conversation.
 
     ```
@@ -89,7 +101,9 @@ two-agent-framework/
 ├── config.py             # Loads environment variables from .env
 ├── instructions.txt      # Initial instructions/prompt for the agents
 ├── main.py               # Orchestrates the agent interaction
-└── requirements.txt      # Lists Python dependencies
+├── requirements.txt      # Lists Python dependencies
+├── system_prompt_ceo.txt   # System prompt for Agent1 (CEO)
+├── system_prompt_genius.txt # System prompt for Agent2 (Genius)
 └── venv/                 # Python virtual environment (ignored by git)
 ```
 
