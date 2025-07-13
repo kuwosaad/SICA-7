@@ -1,0 +1,1 @@
+Your task is to brainstorm ideas for a new eco-friendly product. Agent1 will start by suggesting a product category, and Agent2 will propose a specific product within that category. Continue by refining the idea.
