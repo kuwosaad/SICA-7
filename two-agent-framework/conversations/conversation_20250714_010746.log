@@ -1,0 +1,92 @@
+
+Initial Instruction for Agents:
+recreate a simple drawing application with 10 featus
+
+
+=== Cycle 1 ===
+
+Agent1 (Alpha) is thinking...
+
+Agent1 (Alpha): opencode run [message..]
+
+run opencode with a message
+
+Positionals:
+  message  message to send                                 [array] [default: []]
+
+Options:
+      --help        show help                                          [boolean]
+  -v, --version     show version number                                [boolean]
+      --print-logs  print logs to stderr                               [boolean]
+  -c, --continue    continue the last session                          [boolean]
+  -s, --session     session id to continue                              [string]
+      --share       share the session                                  [boolean]
+  -m, --model       model to use in the format of provider/model        [string]
+
+
+Agent1 (Alpha) sent a message to Agent2 (Beta).
+
+Agent2 (Beta) is thinking...
+
+Agent2 (Beta): opencode run [message..]
+
+run opencode with a message
+
+Positionals:
+  message  message to send                                 [array] [default: []]
+
+Options:
+      --help        show help                                          [boolean]
+  -v, --version     show version number                                [boolean]
+      --print-logs  print logs to stderr                               [boolean]
+  -c, --continue    continue the last session                          [boolean]
+  -s, --session     session id to continue                              [string]
+      --share       share the session                                  [boolean]
+  -m, --model       model to use in the format of provider/model        [string]
+
+
+Agent2 (Beta) sent a message to Agent1 (Alpha).
+
+Agent1 (Alpha) is thinking...
+
+Agent1 (Alpha): opencode run [message..]
+
+run opencode with a message
+
+Positionals:
+  message  message to send                                 [array] [default: []]
+
+Options:
+      --help        show help                                          [boolean]
+  -v, --version     show version number                                [boolean]
+      --print-logs  print logs to stderr                               [boolean]
+  -c, --continue    continue the last session                          [boolean]
+  -s, --session     session id to continue                              [string]
+      --share       share the session                                  [boolean]
+  -m, --model       model to use in the format of provider/model        [string]
+
+
+Agent1 (Alpha) sent a message to Agent2 (Beta).
+
+Agent2 (Beta) is thinking...
+
+Agent2 (Beta): opencode run [message..]
+
+run opencode with a message
+
+Positionals:
+  message  message to send                                 [array] [default: []]
+
+Options:
+      --help        show help                                          [boolean]
+  -v, --version     show version number                                [boolean]
+      --print-logs  print logs to stderr                               [boolean]
+  -c, --continue    continue the last session                          [boolean]
+  -s, --session     session id to continue                              [string]
+      --share       share the session                                  [boolean]
+  -m, --model       model to use in the format of provider/model        [string]
+
+
+Agent2 (Beta) sent a message to Agent1 (Alpha).
+
+Interaction complete.

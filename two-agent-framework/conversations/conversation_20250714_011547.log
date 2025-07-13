@@ -1,0 +1,216 @@
+
+Initial Instruction for Agents:
+recreate a simple drawing application with 10 featus
+
+
+=== Cycle 1 ===
+
+Agent1 (Alpha) is thinking...
+
+Agent1 (Alpha) (OpenCode Error): [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  You are Agent1, the CEO. Your role is to provide high-level strategic direction, focus on business objectives, and ensure the product aligns with market needs. You are decisive and forward-thinking.
+
+You have access to the following OpenCode CLI tools. When you need to use a tool, output the exact command in a <tool_code> block.
+
+Available Tools:
+- opencode run --prompt <prompt>: Send a prompt to the OpenCode CLI agent for conversational interaction. Use this for general analysis, planning, or when you need the OpenCode agent to generate a response based on a prompt.
+- opencode view <file_path>: View the contents of a file.
+- opencode edit <file_path> --description <description>: Edit a file with a description of changes.
+- opencode write <file_path> --content <content>: Write content to a new file.
+- opencode bash <command>: Execute a bash command.
+
+Example Usage:
+To analyze instructions:
+<tool_code>opencode run --prompt "Analyze the initial instructions and propose a high-level plan."</tool_code>
+
+To view a file:
+<tool_code>opencode view instructions.txt</tool_code>
+
+To plan implementation:
+<tool_code>opencode run --prompt "Plan the implementation steps for the eco-friendly product."</tool_code>
+
+recreate a simple drawing application with 10 featus
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194547.log for more details
+
+
+Agent1 (Alpha) sent a message to Agent2 (Beta).
+
+Agent2 (Beta) is thinking...
+
+Agent2 (Beta) (OpenCode Error): [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  OpenCode execution failed: [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  You are Agent1, the CEO. Your role is to provide high-level strategic direction, focus on business objectives, and ensure the product aligns with market needs. You are decisive and forward-thinking.
+
+You have access to the following OpenCode CLI tools. When you need to use a tool, output the exact command in a <tool_code> block.
+
+Available Tools:
+- opencode run --prompt <prompt>: Send a prompt to the OpenCode CLI agent for conversational interaction. Use this for general analysis, planning, or when you need the OpenCode agent to generate a response based on a prompt.
+- opencode view <file_path>: View the contents of a file.
+- opencode edit <file_path> --description <description>: Edit a file with a description of changes.
+- opencode write <file_path> --content <content>: Write content to a new file.
+- opencode bash <command>: Execute a bash command.
+
+Example Usage:
+To analyze instructions:
+<tool_code>opencode run --prompt "Analyze the initial instructions and propose a high-level plan."</tool_code>
+
+To view a file:
+<tool_code>opencode view instructions.txt</tool_code>
+
+To plan implementation:
+<tool_code>opencode run --prompt "Plan the implementation steps for the eco-friendly product."</tool_code>
+
+recreate a simple drawing application with 10 featus
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194547.log for more details
+
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528-qwen3-8b:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194548.log for more details
+
+
+Agent2 (Beta) sent a message to Agent1 (Alpha).
+
+Agent1 (Alpha) is thinking...
+
+Agent1 (Alpha) (OpenCode Error): [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  OpenCode execution failed: [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  OpenCode execution failed: [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  You are Agent1, the CEO. Your role is to provide high-level strategic direction, focus on business objectives, and ensure the product aligns with market needs. You are decisive and forward-thinking.
+
+You have access to the following OpenCode CLI tools. When you need to use a tool, output the exact command in a <tool_code> block.
+
+Available Tools:
+- opencode run --prompt <prompt>: Send a prompt to the OpenCode CLI agent for conversational interaction. Use this for general analysis, planning, or when you need the OpenCode agent to generate a response based on a prompt.
+- opencode view <file_path>: View the contents of a file.
+- opencode edit <file_path> --description <description>: Edit a file with a description of changes.
+- opencode write <file_path> --content <content>: Write content to a new file.
+- opencode bash <command>: Execute a bash command.
+
+Example Usage:
+To analyze instructions:
+<tool_code>opencode run --prompt "Analyze the initial instructions and propose a high-level plan."</tool_code>
+
+To view a file:
+<tool_code>opencode view instructions.txt</tool_code>
+
+To plan implementation:
+<tool_code>opencode run --prompt "Plan the implementation steps for the eco-friendly product."</tool_code>
+
+recreate a simple drawing application with 10 featus
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194547.log for more details
+
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528-qwen3-8b:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194548.log for more details
+
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194548.log for more details
+
+
+Agent1 (Alpha) sent a message to Agent2 (Beta).
+
+Agent2 (Beta) is thinking...
+
+Agent2 (Beta) (OpenCode Error): [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  OpenCode execution failed: [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  OpenCode execution failed: [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  OpenCode execution failed: [0m
+[38;2;128;128;128m█▀▀█ █▀▀█ █▀▀ █▀▀▄ [0m█▀▀ █▀▀█ █▀▀▄ █▀▀
+[38;2;128;128;128m█░░█ █░░█ █▀▀ █░░█ [0m█░░ █░░█ █░░█ █▀▀
+[38;2;128;128;128m▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ [0m▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
+[0m
+[1m>  You are Agent1, the CEO. Your role is to provide high-level strategic direction, focus on business objectives, and ensure the product aligns with market needs. You are decisive and forward-thinking.
+
+You have access to the following OpenCode CLI tools. When you need to use a tool, output the exact command in a <tool_code> block.
+
+Available Tools:
+- opencode run --prompt <prompt>: Send a prompt to the OpenCode CLI agent for conversational interaction. Use this for general analysis, planning, or when you need the OpenCode agent to generate a response based on a prompt.
+- opencode view <file_path>: View the contents of a file.
+- opencode edit <file_path> --description <description>: Edit a file with a description of changes.
+- opencode write <file_path> --content <content>: Write content to a new file.
+- opencode bash <command>: Execute a bash command.
+
+Example Usage:
+To analyze instructions:
+<tool_code>opencode run --prompt "Analyze the initial instructions and propose a high-level plan."</tool_code>
+
+To view a file:
+<tool_code>opencode view instructions.txt</tool_code>
+
+To plan implementation:
+<tool_code>opencode run --prompt "Plan the implementation steps for the eco-friendly product."</tool_code>
+
+recreate a simple drawing application with 10 featus
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194547.log for more details
+
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528-qwen3-8b:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194548.log for more details
+
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194548.log for more details
+
+[0m
+[1m@  [0mopenrouter/deepseek/deepseek-r1-0528-qwen3-8b:free
+[0m
+[91m[1mError: [0mUnexpected error, check log file at /Users/mohammadsaad/.local/share/opencode/log/2025-07-13T194548.log for more details
+
+
+Agent2 (Beta) sent a message to Agent1 (Alpha).
+
+Interaction complete.
