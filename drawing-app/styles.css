@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    background: #f0f0f0;
+    gap: 8px;
+    border-bottom: 1px solid #ccc;
+}
+.canvas-container {
+    flex: 1;
+    overflow: auto;
+}
+#canvas {
+    background: #ffffff;
+    display: block;
+    cursor: crosshair;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Drawing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toolbar">
+        <button data-tool="pencil">Pencil</button>
+        <button data-tool="eraser">Eraser</button>
+        <button data-tool="line">Line</button>
+        <button data-tool="rect">Rect</button>
+        <button data-tool="circle">Circle</button>
+        <button data-tool="text">Text</button>
+        <input type="color" id="colorPicker" value="#000000">
+        <input type="range" id="brushSize" min="1" max="50" value="5">
+        <button id="undoBtn">Undo</button>
+        <button id="redoBtn">Redo</button>
+        <button id="saveBtn">Save</button>
+        <input type="file" id="imageLoader" accept="image/*">
+    </div>
+    <div class="canvas-container">
+        <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
