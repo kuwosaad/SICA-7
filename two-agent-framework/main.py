@@ -176,14 +176,30 @@ def setup_opencode_cli():
     """Install and configure OpenCode CLI if not present"""
     try:
         # Check if OpenCode CLI is installed
-        result = subprocess.run(['opencode', '--version'], capture_output=True, text=True)
-        if result.returncode != 0:
+        try:
+            result = subprocess.run(['opencode', '--version'], capture_output=True, text=True, check=True)
+            print("OpenCode CLI is already installed.")
+        except (subprocess.CalledProcessError, FileNotFoundError):
             print("Installing OpenCode CLI...")
-            subprocess.run([
-                'curl', '-fsSL', 
-                'https://raw.githubusercontent.com/opencode-ai/opencode/refs/heads/main/install'
-            ], shell=True, check=True) # Added check=True to raise error on failure
-        
+            try:
+                print("PATH:", os.environ["PATH"])
+                curl_version_result = subprocess.run(['/usr/bin/curl', '--version'], capture_output=True, text=True, check=True)
+                print("curl version output:", curl_version_result.stdout)
+                install_script_result = subprocess.run(['/usr/bin/curl', '-fsSL', 'https://raw.githubusercontent.com/opencode-ai/opencode/refs/heads/main/install'], capture_output=True, text=True, check=True)
+                print("install script output:", install_script_result.stdout)
+                subprocess.run(['bash', '-c', install_script_result.stdout], check=True)
+                # Add the opencode executable to the PATH
+                home_dir = os.path.expanduser("~")
+                opencode_path = os.path.join(home_dir, ".opencode/bin")
+                os.environ["PATH"] += os.pathsep + opencode_path
+                print("PATH after update:", os.environ["PATH"])
+                print("OpenCode CLI installed successfully.")
+            except (subprocess.CalledProcessError, FileNotFoundError) as e:
+                print(f"curl is not installed or failed. Error: {e}")
+                if isinstance(e, subprocess.CalledProcessError):
+                    print(f"Stderr: {e.stderr}")
+                return False
+
         # Configure authentication
         api_key = os.getenv('AGENT1_API_KEY') # Use AGENT1_API_KEY for opencode auth
         if api_key:
@@ -195,17 +211,9 @@ def setup_opencode_cli():
                 print(f"OpenCode CLI authentication failed: {stderr}")
                 return False
             print(f"OpenCode CLI authentication output: {stdout}")
-        
+
         print("OpenCode CLI setup complete.")
         return True
-    except FileNotFoundError:
-        print("'opencode' command not found. Please ensure OpenCode CLI is in your PATH.")
-        return False
-    except subprocess.CalledProcessError as e:
-        print(f"OpenCode CLI installation failed: {e}")
-        print(f"Stdout: {e.stdout}")
-        print(f"Stderr: {e.stderr}")
-        return False
     except Exception as e:
         print(f"OpenCode CLI setup failed: {e}")
         return False
@@ -256,7 +264,8 @@ def main():
         print(f"\nInitial Instruction for Agents:\n{initial_instructions}\n")
 
         # Sequential conversation loop
-        for cycle in range(1): # Limiting to 1 cycle for initial testing
+        cycle = 0
+        while True:
             print(f"\n=== Cycle {cycle + 1} ===")
             
             # Alpha starts the conversation
@@ -266,21 +275,32 @@ def main():
             sender, msg = beta.receive_message()
             if msg: # Only proceed if a message was received
                 beta.run_turn(alpha, msg) # Beta sends message to Alpha
+            else:
+                print("No message received by Beta, ending interaction.")
+                break
 
             # Alpha receives and responds
             sender, msg = alpha.receive_message()
             if msg: # Only proceed if a message was received
                 alpha.run_turn(beta, msg) # Alpha sends message to Beta
+            else:
+                print("No message received by Alpha, ending interaction.")
+                break
 
             # Beta receives and responds (final turn for this cycle)
             sender, msg = beta.receive_message()
             if msg: # Only proceed if a message was received
                 beta.run_turn(alpha, msg) # Beta sends message to Alpha
+            else:
+                print("No message received by Beta, ending interaction.")
+                break
 
             # Performance assessment for self-improvement
             task_success = assess_cycle_performance(alpha, beta)
             alpha.reflect_and_improve(task_success)
             beta.reflect_and_improve(task_success)
+
+            cycle += 1
 
         print("\nInteraction complete.")
 
