@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+#toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+#canvas {
+    display: block;
+}
+button.active {
+    background: #add8e6;
+}
