@@ -6,6 +6,7 @@ import time
 from pathlib import Path
 import queue
 import threading
+from config import OPENCODE_WORKSPACE
 
 class Agent:
     def __init__(self, name, role, comm_queue, openrouter_model, api_key=None):
@@ -13,9 +14,13 @@ class Agent:
         self.role = role
         self.comm_queue = comm_queue
         self.openrouter_model = openrouter_model
-        self.openrouter_api_key = api_key # Use the provided API key
-        self.workspace_dir = Path("/Users/mohammadsaad/Desktop/SICA/SICA 7/two-agent-framework/sandbox")
-        self.workspace_dir.mkdir(exist_ok=True)
+        self.openrouter_api_key = api_key  # Use the provided API key
+
+        workspace_path = Path(OPENCODE_WORKSPACE)
+        if not workspace_path.is_absolute():
+            workspace_path = Path(__file__).resolve().parent / workspace_path
+        self.workspace_dir = workspace_path
+        self.workspace_dir.mkdir(parents=True, exist_ok=True)
         
         # No direct OpenAI client here; interaction is via OpenCode CLI
         self.messages = [] # Still useful for local tracking of conversation flow
